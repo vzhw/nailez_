@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2024 at 03:31 PM
+-- Generation Time: Apr 28, 2024 at 04:08 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -53,7 +53,7 @@ INSERT INTO `admin` (`id`, `UserName`, `Password`, `updationDate`) VALUES
 --
 -- Table structure for table `tblbikes`
 --
--- Creation: Apr 26, 2024 at 12:24 PM
+-- Creation: Apr 27, 2024 at 08:23 PM
 --
 
 CREATE TABLE `tblbikes` (
@@ -86,7 +86,7 @@ CREATE TABLE `tblbikes` (
 --
 
 INSERT INTO `tblbikes` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `EngineCapacity`, `Mileage`, `Transmission`, `FuelCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `RegDate`, `UpdationDate`) VALUES
-(1, 'Royal Enfield Hunter 350', 8, 'This is the new Royal Enfield Hunter 350. It is accessible, affordable, and also customisable. Now the whole point of bringing a motorcycle like this to the Indian market is obviously to make a lot of money, but while doing so, also allows many Indians – college kids, working professionals, even senior citizens for that matter – to ride a motorcycle that is aspirational, stylish, and has a 350cc engine.', 800, 'Petrol', 2019, 349, 36, 5, 13, '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '2020-07-07 01:34:35', '2024-04-26 13:10:15');
+(111, 'Royal Enfield Hunter 350', 8, 'This is the new Royal Enfield Hunter 350. It is accessible, affordable, and also customisable. Now the whole point of bringing a motorcycle like this to the Indian market is obviously to make a lot of money, but while doing so, also allows many Indians – college kids, working professionals, even senior citizens for that matter – to ride a motorcycle that is aspirational, stylish, and has a 350cc engine.', 800, 'Petrol', 2019, 349, 36, 5, 13, '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '2020-07-07 01:34:35', '2024-04-27 20:25:47');
 
 -- --------------------------------------------------------
 
@@ -94,6 +94,7 @@ INSERT INTO `tblbikes` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOvervie
 -- Table structure for table `tblbooking`
 --
 -- Creation: Apr 11, 2024 at 01:34 PM
+-- Last update: Apr 28, 2024 at 03:03 AM
 --
 
 CREATE TABLE `tblbooking` (
@@ -122,7 +123,14 @@ INSERT INTO `tblbooking` (`id`, `BookingNumber`, `userEmail`, `VehicleId`, `From
 (2, 987456321, 'test@gmail.com', 4, '2020-07-19', '2020-07-24', 'hfghg', 1, '2020-07-09 17:49:21', '2020-07-11 12:20:57'),
 (3, 587473280, 'test@gmail.com', 1, '2024-04-10', '2024-04-19', 'Rental', 1, '2024-04-11 13:42:45', '2024-04-26 15:01:42'),
 (4, 234062867, 'vichu@gmail.com', 1, '2024-04-26', '2024-04-25', 'X', 1, '2024-04-26 01:27:32', '2024-04-26 01:30:16'),
-(5, 888035267, 'vichu@gmail.com', 1, '2024-04-27', '2024-04-26', 'x', 2, '2024-04-26 17:10:22', '2024-04-27 04:58:02');
+(5, 888035267, 'vichu@gmail.com', 1, '2024-04-27', '2024-04-26', 'x', 2, '2024-04-26 17:10:22', '2024-04-27 04:58:02'),
+(6, 692422072, 'vichu@duck.com', 8, '2024-04-28', '2024-04-29', 'XYZ', 1, '2024-04-27 18:32:16', '2024-04-28 03:02:51'),
+(7, 559355767, 'vichu@duck.com', 1, '2024-04-28', '2024-04-30', 'vv', 0, '2024-04-27 19:54:37', NULL),
+(8, 127600653, 'vichu@duck.com', 2, '2024-05-01', '2024-05-03', 'dd', 0, '2024-04-27 22:07:43', NULL),
+(9, 609581745, 'vichu@duck.com', 1, '2024-05-02', '2024-05-09', 'sds', 0, '2024-04-27 22:11:06', NULL),
+(10, 323788100, 'vichu@duck.com', 111, '2024-04-29', '2024-04-30', 'vv', 0, '2024-04-28 02:19:09', NULL),
+(11, 437848223, 'vichu@duck.com', 3, '2024-04-30', '2024-05-01', 'dd', 0, '2024-04-28 02:55:44', NULL),
+(12, 659232312, 'vichu@duck.com', 3, '2024-05-04', '2024-05-05', 'www', 1, '2024-04-28 03:01:44', '2024-04-28 03:03:51');
 
 -- --------------------------------------------------------
 
@@ -220,6 +228,7 @@ INSERT INTO `tblcars` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOverview
 -- Table structure for table `tblcontactusinfo`
 --
 -- Creation: Apr 11, 2024 at 01:34 PM
+-- Last update: Apr 28, 2024 at 03:05 AM
 --
 
 CREATE TABLE `tblcontactusinfo` (
@@ -238,7 +247,7 @@ CREATE TABLE `tblcontactusinfo` (
 --
 
 INSERT INTO `tblcontactusinfo` (`id`, `Address`, `EmailId`, `ContactNo`) VALUES
-(1, 'J&K Block, Laxmi Nagar', 'info@gmail.com', '8974561236');
+(1, 'MH, IETCU', 'vichu@duck.com', '9188070526');
 
 -- --------------------------------------------------------
 
@@ -305,7 +314,7 @@ CREATE TABLE `tblelectronics` (
 --
 
 INSERT INTO `tblelectronics` (`id`, `ElecTitle`, `Brand`, `ElecOverview`, `PricePerDay`, `ModelYear`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `Bag`, `Charger`, `RegDate`, `UpdationDate`, `Category`) VALUES
-(1, 'Sony Alpha ZV-E10L', 'Sony', 'The Sony ZV-E10 is the perfect compact camera to get you started with video and photo content. This vlogging camera has useful features, especially if you work a lot with creating content for social media.', 550, 2021, 'sony1.jpg', 'sony2.jpg', 'sony3.jpg', 'sony4.jpg', 'sony5.jpg', 1, 1, '2024-04-27 07:19:20', '2024-04-27 11:07:31', 'Camera');
+(222, 'Sony Alpha ZV-E10L', 'Sony', 'The Sony ZV-E10 is the perfect compact camera to get you started with video and photo content. This vlogging camera has useful features, especially if you work a lot with creating content for social media.', 550, 2021, 'sony1.jpg', 'sony2.jpg', 'sony3.jpg', 'sony4.jpg', 'sony5.jpg', 1, 1, '2024-04-27 07:19:20', '2024-04-28 01:58:17', 'Camera');
 
 -- --------------------------------------------------------
 
@@ -340,6 +349,32 @@ INSERT INTO `tblpages` (`id`, `PageName`, `type`, `detail`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tblprod`
+--
+-- Creation: Apr 27, 2024 at 08:33 PM
+--
+
+CREATE TABLE `tblprod` (
+  `id` int(11) NOT NULL,
+  `Vimage1` varchar(255) DEFAULT NULL,
+  `VehiclesTitle` varchar(255) DEFAULT NULL,
+  `BrandName` varchar(255) DEFAULT NULL,
+  `PricePerDay` decimal(10,2) DEFAULT NULL,
+  `FromDate` date DEFAULT NULL,
+  `ToDate` date DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `Status` varchar(50) DEFAULT NULL,
+  `totaldays` int(11) DEFAULT NULL,
+  `BookingNumber` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `tblprod`:
+--
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tblsubscribers`
 --
 -- Creation: Apr 11, 2024 at 01:34 PM
@@ -369,7 +404,6 @@ INSERT INTO `tblsubscribers` (`id`, `SubscriberEmail`, `PostingDate`) VALUES
 -- Table structure for table `tbltestimonial`
 --
 -- Creation: Apr 11, 2024 at 01:34 PM
--- Last update: Apr 27, 2024 at 02:13 PM
 --
 
 CREATE TABLE `tbltestimonial` (
@@ -398,7 +432,6 @@ INSERT INTO `tbltestimonial` (`id`, `UserEmail`, `Testimonial`, `PostingDate`, `
 -- Table structure for table `tblusers`
 --
 -- Creation: Apr 11, 2024 at 01:34 PM
--- Last update: Apr 27, 2024 at 02:17 PM
 --
 
 CREATE TABLE `tblusers` (
@@ -427,6 +460,38 @@ INSERT INTO `tblusers` (`id`, `FullName`, `EmailId`, `Password`, `ContactNo`, `d
 (1, 'Test', 'test@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '6465465465', '', 'L-890, Gaur City Ghaziabad', 'Ghaziabad', 'India', '2020-07-07 14:00:49', '2020-07-12 05:44:29'),
 (2, 'Viswajith', 'vichu@gmail.com', '22d3dcbc86ce942a8fc71aaaa8b30287', '9188070526', '12/10/2002', 'Palakkad', 'Palakkad', 'India', '2024-04-26 01:24:35', '2024-04-26 01:26:15'),
 (3, 'vichu', 'vichu@duck.com', '22d3dcbc86ce942a8fc71aaaa8b30287', '9188070526', NULL, NULL, NULL, NULL, '2024-04-27 14:17:07', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_payment`
+--
+-- Creation: Apr 27, 2024 at 05:31 PM
+--
+
+CREATE TABLE `tbl_payment` (
+  `id` int(11) NOT NULL,
+  `order_hash` varchar(255) NOT NULL,
+  `payer_email` varchar(100) NOT NULL,
+  `amount` double(10,2) NOT NULL,
+  `currency` varchar(25) NOT NULL,
+  `payment_type` varchar(25) NOT NULL,
+  `order_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `order_status` varchar(25) NOT NULL,
+  `notes` text NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `country` varchar(25) NOT NULL,
+  `postal_code` varchar(25) NOT NULL,
+  `stripe_payment_intent_id` varchar(255) NOT NULL,
+  `payment_status` varchar(25) NOT NULL,
+  `stripe_payment_status` varchar(25) NOT NULL,
+  `stripe_payment_response` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `tbl_payment`:
+--
 
 -- --------------------------------------------------------
 
@@ -508,6 +573,12 @@ ALTER TABLE `tblpages`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tblprod`
+--
+ALTER TABLE `tblprod`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tblsubscribers`
 --
 ALTER TABLE `tblsubscribers`
@@ -525,6 +596,12 @@ ALTER TABLE `tbltestimonial`
 ALTER TABLE `tblusers`
   ADD PRIMARY KEY (`id`),
   ADD KEY `EmailId` (`EmailId`);
+
+--
+-- Indexes for table `tbl_payment`
+--
+ALTER TABLE `tbl_payment`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `transactions`
@@ -546,7 +623,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `tblbooking`
 --
 ALTER TABLE `tblbooking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tblbrands`
@@ -576,13 +653,19 @@ ALTER TABLE `tblcontactusquery`
 -- AUTO_INCREMENT for table `tblelectronics`
 --
 ALTER TABLE `tblelectronics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
 
 --
 -- AUTO_INCREMENT for table `tblpages`
 --
 ALTER TABLE `tblpages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `tblprod`
+--
+ALTER TABLE `tblprod`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tblsubscribers`
@@ -601,6 +684,12 @@ ALTER TABLE `tbltestimonial`
 --
 ALTER TABLE `tblusers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_payment`
+--
+ALTER TABLE `tbl_payment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `transactions`

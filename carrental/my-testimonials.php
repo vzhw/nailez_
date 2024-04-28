@@ -13,7 +13,7 @@ else{
 <html lang="en">
 <head>
 
-<title>Car Rental Portal | My Testimonials </title>
+<title>My Testimonials </title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -47,7 +47,7 @@ else{
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
 <body>
-<?php include('includes/colorswitcher.php');?>
+
 <!-- /Switcher -->  
         
 <!--Header-->

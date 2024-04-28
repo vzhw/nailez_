@@ -179,7 +179,7 @@ if ($query->rowCount() > 0) {
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="resentnewcar">
 
-<?php $sql = "SELECT tblelectronics.ElecTitle, tblbrands.BrandName, tblelectronics.PricePerDay, tblelectronics.ModelYear, tblelectronics.id, tblelectronics.ElecOverview, tblelectronics.Vimage1 FROM tblelectronics JOIN tblbrands ON tblbrands.id = tblelectronics.id ORDER BY tblelectronics.id DESC LIMIT 3";
+<?php $sql = "SELECT tblelectronics.ElecTitle, tblbrands.BrandName, tblelectronics.PricePerDay, tblelectronics.ModelYear, tblelectronics.ElecOverview, tblelectronics.Vimage1 FROM tblelectronics JOIN tblbrands ON tblbrands.BrandName= tblelectronics.Brand ORDER BY tblelectronics.id DESC LIMIT 3";
 $query = $dbh->prepare($sql);
 $query->execute();
 $results = $query->fetchAll(PDO::FETCH_OBJ);

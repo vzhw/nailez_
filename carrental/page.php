@@ -8,7 +8,7 @@ include('includes/config.php');
 <html lang="en">
 <head>
 
-<title>Car Rental Portal | Page details</title>
+<title>Nailez</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -42,7 +42,7 @@ include('includes/config.php');
 </head>
 <body>
 <<!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
+
 <!-- /Switcher -->  
         
 <!--Header-->

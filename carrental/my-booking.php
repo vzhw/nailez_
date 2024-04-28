@@ -11,7 +11,7 @@ else{
 <html lang="en">
 <head>
 
-<title>Car Rental Portal - My Booking</title>
+<title>Nailez</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -53,7 +53,7 @@ else{
 <body>
 
 <!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
+
 <!-- /Switcher -->  
         
 <!--Header-->
@@ -109,12 +109,12 @@ foreach($results as $result)
    
       <div class="col-md-8 col-sm-8">
         <div class="profile_wrap">
-          <h5 class="uppercase underline">My Booikngs </h5>
+          <h5 class="uppercase underline">My Bookngs </h5>
           <div class="my_vehicles_list">
             <ul class="vehicle_listing">
 <?php 
 $useremail=$_SESSION['login'];
- $sql = "SELECT tblvehicles.Vimage1 as Vimage1,tblvehicles.VehiclesTitle,tblvehicles.id as vid,tblbrands.BrandName,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.Status,tblvehicles.PricePerDay,DATEDIFF(tblbooking.ToDate,tblbooking.FromDate) as totaldays,tblbooking.BookingNumber  from tblbooking join tblvehicles on tblbooking.VehicleId=tblvehicles.id join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblbooking.userEmail=:useremail order by tblbooking.id desc";
+$sql = "SELECT tblcars.Vimage1 as Vimage1,tblcars.VehiclesTitle,tblcars.id as vid,tblbrands.BrandName,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.Status,tblcars.PricePerDay,DATEDIFF(tblbooking.ToDate,tblbooking.FromDate) as totaldays,tblbooking.BookingNumber  from tblbooking join tblcars on tblbooking.VehicleId=tblcars.id join tblbrands on tblbrands.id=tblcars.VehiclesBrand where tblbooking.userEmail=:useremail order by tblbooking.id desc";
 $query = $dbh -> prepare($sql);
 $query-> bindParam(':useremail', $useremail, PDO::PARAM_STR);
 $query->execute();

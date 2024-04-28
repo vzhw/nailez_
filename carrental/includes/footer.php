@@ -49,7 +49,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
         </div>
   
         <div class="col-md-3 col-sm-6">
-          <h6>Subscribe Newsletter</h6>
+          <h6>Subscribe to our Newsletter</h6>
           <div class="newsletter-form">
             <form method="post">
               <div class="form-group">
@@ -57,7 +57,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
               </div>
               <button type="submit" name="emailsubscibe" class="btn btn-block">Subscribe <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
             </form>
-            <p class="subscribed-text">*We send great deals and latest auto news to our subscribed users very week.</p>
+            <p class="subscribed-text">*We send great deals and latest product listing to our subscribed users very week.</p>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
           </div>
         </div>
         <div class="col-md-6 col-md-pull-6">
-          <p class="copy-right">Copyright &copy; 2020 Car Rental Portal. All Rights Reserved</p>
+          <p class="copy-right">Copyright &copy; 2024 Nailez. All Rights Reserved</p>
         </div>
       </div>
     </div>

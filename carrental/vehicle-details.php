@@ -52,11 +52,13 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 ?>
 
 
+
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
 
-<title>Car Rental | Vehicle Details</title>
+<title>Nailez</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -89,7 +91,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 <body>
 
 <!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
+
 <!-- /Switcher -->  
 
 <!--Header-->
@@ -128,7 +130,29 @@ $_SESSION['brndid']=$result->bid;
 </section>
 <!--/Listing-Image-Slider-->
 
+<?php 
+	define('BASE_URL', 'http://localhost/carx/carrental');
+	define('STRIPE_SECRET_KEY','sk_test_51MnZSXSJ4QxhdhDrUB3QLGviEbKrfQXbbvSbCpgv00WtgzZikhsO0aPXjsq26SnJMlYgHVa9j5GybxEenAzpnb3000F89X0mDD');
+	define('AMOUNT', $result->PricePerDay);
+	require 'stripe/vendor/autoload.php';
+	include 'stripe/StripeTransactionLink.php';
 
+	$generator = new StripeTransactionLink(STRIPE_SECRET_KEY);
+
+
+	$productName = $result->VehiclesTitle;
+	$amount =AMOUNT*100; //  usd
+	$currency = 'inr';
+	$successUrl = BASE_URL.'/stripe/stripe-success.php';
+	$cancelUrl = BASE_URL.'/stripe/stripe-cancel.php';
+	$paymentLink = $generator->generatePaymentLink($productName, $amount, $currency, $successUrl, $cancelUrl);
+
+		
+	
+
+
+
+?>
 <!--Listing-detail-->
 <section class="listing-detail">
   <div class="container">
@@ -357,10 +381,19 @@ $_SESSION['brndid']=$result->bid;
             <div class="form-group">
               <textarea rows="4" class="form-control" name="message" placeholder="Message" required></textarea>
             </div>
+
+            <?php if($_SESSION['login'])
+              {?>
+              <div class="form-group">
+              <input type="submit" class="btn" name="submit" value="Pay Now" id="payNowButton" required>
+              </div>
+              <?php } else { ?>
+          <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login to Pay</a>
+          <?php } ?>
           <?php if($_SESSION['login'])
               {?>
               <div class="form-group">
-                <input type="submit" class="btn"  name="submit" value="Book Now">
+              <input type="submit" class="btn"  name="submit" value="Book Now">
               </div>
               <?php } else { ?>
 <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login to Rent</a>
@@ -471,6 +504,15 @@ foreach($results as $result)
             toDateInput.disabled = false;
         });
 </script>
+<script>
+document.getElementById("payNowButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    var paymentLink = "<?php echo $paymentLink['url']; ?>";
+    window.open(paymentLink, "_blank", "width=600,height=400"); // Open the payment link in a new tab as a popup
+});
+</script>
+
+
 
 </body>
 </html>

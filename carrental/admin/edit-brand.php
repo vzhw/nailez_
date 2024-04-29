@@ -11,8 +11,9 @@ else{
 if(isset($_POST['submit']))
 {
 $brand=$_POST['brand'];
+$categroy=$_POST['category'];
 $id=$_GET['id'];
-$sql="update  tblbrands set BrandName=:brand where id=:id";
+$sql="UPDATE tblbrands SET BrandName=:brand, Category=:category WHERE id=:id";
 $query = $dbh->prepare($sql);
 $query->bindParam(':brand',$brand,PDO::PARAM_STR);
 $query->bindParam(':id',$id,PDO::PARAM_STR);
@@ -35,7 +36,7 @@ $msg="Brand Update successfully";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 	
-	<title>Car Rental Portal | Admin Update Brand</title>
+	<title>Nailez</title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -119,6 +120,12 @@ foreach($results as $result)
 												</div>
 											</div>
 											<div class="hr-dashed"></div>
+											<div class="form-group">
+												<label class="col-sm-4 control-label">Brand Category</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" value="<?php echo htmlentities($result->Category);?>" name="Category" id="category" required>
+												</div>
+											</div>
 											
 										<?php }} ?>
 								

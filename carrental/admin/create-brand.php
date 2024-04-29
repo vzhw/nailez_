@@ -11,9 +11,11 @@ else{
 if(isset($_POST['submit']))
 {
 $brand=$_POST['brand'];
-$sql="INSERT INTO  tblbrands(BrandName) VALUES(:brand)";
+$category=$_POST['category'];
+$sql="INSERT INTO  tblbrands(BrandName,Category) VALUES(:brand, :category)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':brand',$brand,PDO::PARAM_STR);
+$query->bindParam(':category',$category,PDO::PARAM_STR);
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
@@ -39,7 +41,7 @@ $error="Something went wrong. Please try again";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 	
-	<title>Car Rental Portal | Admin Create Brand</title>
+	<title>Nailez</title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -105,6 +107,12 @@ $error="Something went wrong. Please try again";
 												<label class="col-sm-4 control-label">Brand Name</label>
 												<div class="col-sm-8">
 													<input type="text" class="form-control" name="brand" id="brand" required>
+												</div>
+											</div><br>
+											<div class="form-group">
+												<label class="col-sm-4 control-label">Category</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" name="category" id="category" required>
 												</div>
 											</div>
 											<div class="hr-dashed"></div>

@@ -49,7 +49,7 @@ echo "<script type='text/javascript'> document.location = 'confirmed-bookings.ph
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 	
-	<title>Car Rental Portal | New Bookings   </title>
+	<title>Nailez</title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -159,7 +159,7 @@ foreach($results as $result)
 										</tr>
 											<tr>											
 											<th>Vehicle Name</th>
-											<td><a href="edit-vehicle.php?id=<?php echo htmlentities($result->vid);?>"><?php echo htmlentities($result->BrandName);?> , <?php echo htmlentities($result->VehiclesTitle);?></td>
+											<td><a href="edit-vehicle.php?id=<?php echo htmlentities($result->vid);?>"><?php echo htmlentities($result->VehiclesTitle);?></td>
 											<th>Booking Date</th>
 											<td><?php echo htmlentities($result->PostingDate);?></td>
 										</tr>
@@ -192,7 +192,7 @@ echo htmlentities('Confirmed');
  	echo htmlentities('Cancelled');
  }
 										?></td>
-										<th>Last pdation Date</th>
+										<th>Last Updation Date</th>
 										<td><?php echo htmlentities($result->LastUpdationDate);?></td>
 									</tr>
 

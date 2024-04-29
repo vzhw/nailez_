@@ -104,18 +104,7 @@ $query -> execute();
 											<th>Action</th>
 										</tr>
 									</thead>
-									<tfoot>
-										<tr>
-										<th>#</th>
-											<th>Name</th>
-											<th>Email</th>
-											<th>Contact No</th>
-											<th>Message</th>
-											<th>Posting date</th>
-											<th>Action</th>
-										</tr>
-										</tr>
-									</tfoot>
+									
 									<tbody>
 
 									<?php $sql = "SELECT * from  tblcontactusquery ";
